@@ -11,6 +11,7 @@ import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
 
+  // Inserir após o NavComponent canActivate: [AuthGuard],
   { path: 'login', component: LoginComponent },
   {
     path: '', component: NavComponent, canActivate: [AuthGuard], children: [

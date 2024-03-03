@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   }
 
 
+  //Valida o email e senha
   email = new FormControl(null, Validators.email);
   senha = new FormControl(null, Validators.minLength(3));
 
