@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class TecnicoService {
 
-  private baseUrl = "http://localhost:8080/tecnicos";
+  baseUrl = "http://localhost:8080"
 
   constructor(private http: HttpClient) { }
 
@@ -19,6 +19,8 @@ export class TecnicoService {
   findAll(): Observable<Tecnico[]> {
     return this.http.get<Tecnico[]>(`${this.baseUrl}/tecnicos`);
   }
+
+
 
   create(tecnico: Tecnico): Observable<Tecnico> {
     return this.http.post<Tecnico>(`${this.baseUrl}/tecnicos`, tecnico);

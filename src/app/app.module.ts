@@ -35,6 +35,8 @@ import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
 import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecnico-create.component';
+import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
+import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecnico-delete.component';
 
 
 @NgModule({
@@ -46,6 +48,8 @@ import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecn
     TecnicoListComponent,
     LoginComponent,
     TecnicoCreateComponent,
+    TecnicoUpdateComponent,
+    TecnicoDeleteComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,7 +79,8 @@ import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecn
       timeOut: 4000,
       closeButton: true,
       progressBar: true
-    })
+    }),
+    // NgxMaskModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
