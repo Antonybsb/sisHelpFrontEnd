@@ -32,6 +32,12 @@ export class LoginComponent implements OnInit {
 
   }
 
+  // logar() {
+  //   this.service.authenticate(this.creds).subscribe(resposta => {
+  //     this.toast.info(resposta.headers.get('Authorization'))
+  //   })
+  // }
+
   logar() {
     this.service.authenticate(this.creds).subscribe(resposta => {
       this.service.successfulLogin(resposta.headers.get('Authorization').substring(7));
